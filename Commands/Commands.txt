@@ -4,3 +4,48 @@ mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -Darchety
 
 # My test
 mvn archetype:generate -DgroupId=com.diego.study -DartifactId=diego-study-Java-Fundamentals -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+# Compile and generate a .jar, execute it in a project folder
+mnv clean package
+
+# clean deletes the /targe folder, and create it again
+
+# How to modify the .jar name
+
+In pom.xml, include this:
+
+  <build>
+    <finalName>theFinalJarName</finalName>
+
+Example
+
+  <build>
+    <finalName>diego-study-Java-Fundamentals</finalName>
+
+# How to define the main class in pom
+
+       <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>your.package.MainClass</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+        </plugin>
+
+Example
+
+       <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>com.diego.study.App</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+        </plugin>
