@@ -1,0 +1,7 @@
+# First Create a parent project
+
+mvn archetype:generate -DgroupId=com.diego.core.java.fundamentals -DartifactId=core-java-fundamentals
+
+mvn archetype:generate -DgroupId=com.diego.core.java.fundamentals -DartifactId=chapter-04
+
+
