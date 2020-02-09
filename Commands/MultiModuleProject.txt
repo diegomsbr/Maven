@@ -4,4 +4,8 @@ mvn archetype:generate -DgroupId=com.diego.core.java.fundamentals -DartifactId=c
 
 mvn archetype:generate -DgroupId=com.diego.core.java.fundamentals -DartifactId=chapter-04
 
+# Helpfull links
+
+http://websystique.com/maven/creating-maven-multi-module-project-with-eclipse/
+
 
